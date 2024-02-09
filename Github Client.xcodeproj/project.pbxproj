@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8238D2C52B5EEC9800D1E3F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8238D2C42B5EEC9800D1E3F9 /* AppDelegate.swift */; };
 		8238D2C72B5EEC9800D1E3F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8238D2C62B5EEC9800D1E3F9 /* SceneDelegate.swift */; };
-		8238D2C92B5EEC9800D1E3F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8238D2C82B5EEC9800D1E3F9 /* ViewController.swift */; };
 		8238D2CE2B5EEC9B00D1E3F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8238D2CD2B5EEC9B00D1E3F9 /* Assets.xcassets */; };
 		8238D2D12B5EEC9B00D1E3F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8238D2CF2B5EEC9B00D1E3F9 /* LaunchScreen.storyboard */; };
 		8238D2DC2B5EEC9C00D1E3F9 /* Github_ClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8238D2DB2B5EEC9C00D1E3F9 /* Github_ClientTests.swift */; };
@@ -22,6 +21,7 @@
 		823A25D42B7638E100E45914 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823A25D32B7638E100E45914 /* Follower.swift */; };
 		823A25D62B7638F000E45914 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823A25D52B7638F000E45914 /* User.swift */; };
 		823A25D82B763E2F00E45914 /* FollowersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823A25D72B763E2F00E45914 /* FollowersCollectionViewCell.swift */; };
+		823A25DA2B76445900E45914 /* NetworkManager .swift in Sources */ = {isa = PBXBuildFile; fileRef = 823A25D92B76445900E45914 /* NetworkManager .swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,6 @@
 		8238D2C12B5EEC9800D1E3F9 /* Github Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Github Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8238D2C42B5EEC9800D1E3F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8238D2C62B5EEC9800D1E3F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8238D2C82B5EEC9800D1E3F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8238D2CD2B5EEC9B00D1E3F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8238D2D02B5EEC9B00D1E3F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8238D2D22B5EEC9B00D1E3F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,6 +60,7 @@
 		823A25D32B7638E100E45914 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		823A25D52B7638F000E45914 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		823A25D72B763E2F00E45914 /* FollowersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersCollectionViewCell.swift; sourceTree = "<group>"; };
+		823A25D92B76445900E45914 /* NetworkManager .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager .swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,18 +111,16 @@
 		8238D2C32B5EEC9800D1E3F9 /* Github Client */ = {
 			isa = PBXGroup;
 			children = (
+				8238D2F62B5EED6900D1E3F9 /* Controllers */,
+				823A25DD2B76450900E45914 /* Network */,
+				823A25DC2B7644E500E45914 /* Models */,
+				823A25DB2B7644C800E45914 /* Cells */,
 				8238D2F72B5EEE0F00D1E3F9 /* Extensions */,
 				8238D2C42B5EEC9800D1E3F9 /* AppDelegate.swift */,
 				8238D2C62B5EEC9800D1E3F9 /* SceneDelegate.swift */,
-				8238D2C82B5EEC9800D1E3F9 /* ViewController.swift */,
 				8238D2CD2B5EEC9B00D1E3F9 /* Assets.xcassets */,
 				8238D2CF2B5EEC9B00D1E3F9 /* LaunchScreen.storyboard */,
 				8238D2D22B5EEC9B00D1E3F9 /* Info.plist */,
-				8238D2F62B5EED6900D1E3F9 /* Controllers */,
-				8238D2FA2B5EEE6500D1E3F9 /* Helper.swift */,
-				823A25D32B7638E100E45914 /* Follower.swift */,
-				823A25D52B7638F000E45914 /* User.swift */,
-				823A25D72B763E2F00E45914 /* FollowersCollectionViewCell.swift */,
 			);
 			path = "Github Client";
 			sourceTree = "<group>";
@@ -156,9 +154,35 @@
 		8238D2F72B5EEE0F00D1E3F9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8238D2FA2B5EEE6500D1E3F9 /* Helper.swift */,
 				8238D2F82B5EEE3100D1E3F9 /* Extensions+UIView.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		823A25DB2B7644C800E45914 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				823A25D72B763E2F00E45914 /* FollowersCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		823A25DC2B7644E500E45914 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				823A25D52B7638F000E45914 /* User.swift */,
+				823A25D32B7638E100E45914 /* Follower.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		823A25DD2B76450900E45914 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				823A25D92B76445900E45914 /* NetworkManager .swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,7 +315,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8238D2C92B5EEC9800D1E3F9 /* ViewController.swift in Sources */,
 				8238D2C52B5EEC9800D1E3F9 /* AppDelegate.swift in Sources */,
 				823A25D82B763E2F00E45914 /* FollowersCollectionViewCell.swift in Sources */,
 				823A25D22B7629E700E45914 /* FollowersViewController.swift in Sources */,
@@ -301,6 +324,7 @@
 				8238D2C72B5EEC9800D1E3F9 /* SceneDelegate.swift in Sources */,
 				8238D2F92B5EEE3100D1E3F9 /* Extensions+UIView.swift in Sources */,
 				8238D2FB2B5EEE6500D1E3F9 /* Helper.swift in Sources */,
+				823A25DA2B76445900E45914 /* NetworkManager .swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
