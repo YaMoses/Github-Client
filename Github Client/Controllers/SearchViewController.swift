@@ -69,8 +69,8 @@ class SearchViewController: UIViewController {
 
         // Validation passed
         let followerViewController = FollowersViewController()
-//        followerViewController.username = usernameTextField.text
-//        followerViewController.title = usernameTextField.text
+        followerViewController.username = usernameTextField.text
+       // followerViewController.title = usernameTextField.text
         navigationController?.pushViewController(followerViewController, animated: true)
     }
 }

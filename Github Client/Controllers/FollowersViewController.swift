@@ -8,7 +8,9 @@
 import UIKit
 
 class FollowersViewController: UIViewController {
-
+    //var title = ""
+    var username: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
