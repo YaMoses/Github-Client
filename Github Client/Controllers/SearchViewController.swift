@@ -11,7 +11,7 @@ class SearchViewController: UIViewController {
     
     let customView = UIView()
     
-    let githubLogoImageView = UIImageView(title: "gh-logo")
+    let githubLogoImageView = UIImageView(title: "github-logo")
     let usernameTextField = UITextField(placeholder: "Enter Username")
     let searchButton = UIButton(title: "Search", backgroundColor: .systemGreen)
     
@@ -51,7 +51,6 @@ class SearchViewController: UIViewController {
     }
     
     @objc func validateButtonTapped() {
-          
       }
 
       private func showAlert(message: String) {
@@ -70,7 +69,7 @@ class SearchViewController: UIViewController {
         // Validation passed
         let followerViewController = FollowersViewController()
         followerViewController.username = usernameTextField.text
-       // followerViewController.title = usernameTextField.text
+        followerViewController.title = usernameTextField.text
         navigationController?.pushViewController(followerViewController, animated: true)
     }
 }
