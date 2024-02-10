@@ -21,6 +21,8 @@ class FollowersViewController: UIViewController {
         super.viewDidLoad()
         configureNavigationBar()
         configureCollectionView()
+        getFollowers(userName: username, page: currentPage)
+        configureDataSource()
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.isTranslucent = true
     }
@@ -40,6 +42,31 @@ class FollowersViewController: UIViewController {
                // Scrolling up, show large title
                navigationController?.navigationBar.prefersLargeTitles = true
            }
+    }
+    
+    func getFollowers(userName: String, page: Int) {
+        NetworkManager.shared.getFollowers(username: username, page: page) { [weak self] followers, error in
+            guard let self = self else { return }
+
+                 if let error = error {
+                     print("Error fetching followers: \(error)")
+                     return
+                 }
+            
+                 if followers!.count < 100 {
+                     self.moreUsersAvailable = false
+                 }
+
+                if let followers = followers {
+                    self.followers.append(contentsOf: followers)
+                  DispatchQueue.main.async {
+                    self.updateData()
+                    //self.userNotFoundView.isHidden = followers.isEmpty
+               }
+            } else {
+                    print("Error: Users array is nil!")
+            }
+        }
     }
 
     func configureNavigationBar() {
@@ -126,7 +153,7 @@ extension FollowersViewController: UICollectionViewDelegate {
                 return
             }
             currentPage += 1
-          //  getFollowers(userName: username, page: currentPage)
+            getFollowers(userName: username, page: currentPage)
             
             scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 60, right: 0)
         }

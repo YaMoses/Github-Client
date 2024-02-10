@@ -24,7 +24,7 @@ class FollowersCollectionViewCell: UICollectionViewCell {
     func set(follower: Follower) {
         usernameLabel.text = follower.login
         
-        //userImageView.downloadImage(from: follower.avatarUrl ?? "" )
+        userImageView.downloadImage(from: follower.avatarUrl ?? "" )
         
         contentView.layoutIfNeeded()
         userImageView.layer.cornerRadius = userImageView.bounds.width / 2
