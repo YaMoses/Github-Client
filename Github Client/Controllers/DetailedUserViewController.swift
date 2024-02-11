@@ -90,29 +90,29 @@ class DetailedUserViewController: UIViewController {
         }
     }
     
-//    func configureTableView() {
-//        tableView = UITableView(frame: .zero , style: .plain)
-//        view.addSubview(tableView)
-//        tableView.delegate = self
-//        
-//        tableView.translatesAutoresizingMaskIntoConstraints = false
-//        NSLayoutConstraint.activate([
-//            tableView.topAnchor.constraint(equalTo: userRepositoryView.bottomAnchor),
-//            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-//            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-//            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-//                ])
-//    
-//        tableView.register(RepoTableViewCell.self, forCellReuseIdentifier: RepoTableViewCell.reuseID)
-//        }
-//    
-//    func configureDataSource() {
-//          dataSource = UITableViewDiffableDataSource<Section, Repo>(tableView: tableView) { tableView, indexPath, model in
-//              let cell = tableView.dequeueReusableCell(withIdentifier: RepoTableViewCell.reuseID, for: indexPath) as! RepoTableViewCell
-//              cell.configure(with: model)
-//              return cell
-//          }
-//      }
+    func configureTableView() {
+        tableView = UITableView(frame: .zero , style: .plain)
+        view.addSubview(tableView)
+        tableView.delegate = self
+        
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: userRepositoryView.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+                ])
+    
+        tableView.register(RepoTableViewCell.self, forCellReuseIdentifier: RepoTableViewCell.reuseID)
+        }
+    
+    func configureDataSource() {
+          dataSource = UITableViewDiffableDataSource<Section, Repo>(tableView: tableView) { tableView, indexPath, model in
+              let cell = tableView.dequeueReusableCell(withIdentifier: RepoTableViewCell.reuseID, for: indexPath) as! RepoTableViewCell
+              cell.configure(with: model)
+              return cell
+          }
+      }
     
     private func updateUserInformation() {
         userRepositoryView.fullNameLabel.text = user?.name
@@ -129,28 +129,28 @@ class DetailedUserViewController: UIViewController {
     }
 }
 
-//extension DetailedUserViewController: UITableViewDelegate {
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let selectedPath = indexPath.row
-//        let repo = self.repo[selectedPath]
-//        print(repo.name ?? "")
-//
-//        var baseURl = "https://github.com/"
-//        let owner = selectedFollower!.login
-//        let name = repo.name
-//        
-//        if let owner = owner {
-//            if let name = name {
-//                baseURl = baseURl+"\(owner)/\(name)"
-//            }
-//        }
-//       
-//        if let repoURL = URL(string: baseURl) {
-//             let webViewController = WebViewController()
-//             webViewController.repositoryURL = repoURL
-//             navigationController?.pushViewController(webViewController, animated: true)
-//         } else {
-//             print("Error: Invalid repository URL")
-//         }
-//    }
-//}
+extension DetailedUserViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedPath = indexPath.row
+        let repo = self.repo[selectedPath]
+        print(repo.name ?? "")
+
+        var baseURl = "https://github.com/"
+        let owner = selectedFollower!.login
+        let name = repo.name
+        
+        if let owner = owner {
+            if let name = name {
+                baseURl = baseURl+"\(owner)/\(name)"
+            }
+        }
+       
+        if let repoURL = URL(string: baseURl) {
+             let webViewController = WebViewController()
+             webViewController.repositoryURL = repoURL
+             navigationController?.pushViewController(webViewController, animated: true)
+         } else {
+             print("Error: Invalid repository URL")
+         }
+    }
+}

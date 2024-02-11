@@ -60,7 +60,7 @@ extension UIImageView {
             if error != nil { return }
                 guard let response = response as? HTTPURLResponse, response.statusCode == 200 else { return }
                 guard let data = data else { return }
-                guard let image = UIImage(data: data) else { return }
+                guard let _ = UIImage(data: data) else { return }
                 
             guard let image = UIImage(data: data) else { return }
             cache.setObject(image, forKey: cacheKey)

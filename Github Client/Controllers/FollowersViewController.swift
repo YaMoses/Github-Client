@@ -138,6 +138,14 @@ class FollowersViewController: UIViewController {
             self.dataSource?.apply(snapshot, animatingDifferences: true)
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let follower = followers[indexPath.item]
+        
+        let detailedUserVC = DetailedUserViewController()
+        detailedUserVC.selectedFollower = follower
+        navigationController?.pushViewController(detailedUserVC, animated: true)
+    }
 }
 
 extension FollowersViewController: UICollectionViewDelegate {
