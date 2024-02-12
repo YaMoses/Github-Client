@@ -27,8 +27,8 @@ class DetailedUserViewController: UIViewController {
         setupUI()
         getInfo(username: (selectedFollower?.login)!)
         getRepo(username: (selectedFollower?.login)!)
-//        configureTableView()
-//        configureDataSource()
+        configureTableView()
+        configureDataSource()
         setupUIElements()
     }
 
