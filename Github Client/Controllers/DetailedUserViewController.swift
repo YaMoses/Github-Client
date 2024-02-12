@@ -30,6 +30,8 @@ class DetailedUserViewController: UIViewController {
         configureTableView()
         configureDataSource()
         setupUIElements()
+        navigationController?.navigationBar.prefersLargeTitles = false
+
     }
 
     func setupUIElements() {
