@@ -45,26 +45,19 @@ class FollowersViewController: UIViewController {
     }
     
     func getFollowers(userName: String, page: Int) {
-        NetworkManager.shared.getFollowers(username: username, page: page) { [weak self] followers, error in
-            guard let self = self else { return }
-
-                 if let error = error {
-                     print("Error fetching followers: \(error)")
-                     return
-                 }
-            
-                 if followers!.count < 100 {
-                     self.moreUsersAvailable = false
-                 }
-
-                if let followers = followers {
-                    self.followers.append(contentsOf: followers)
-                  DispatchQueue.main.async {
-                    self.updateData()
-                    //self.userNotFoundView.isHidden = followers.isEmpty
-               }
-            } else {
-                    print("Error: Users array is nil!")
+        NetworkManager.shared.getFollowers(username: userName, page: 1) { [weak self] result in
+            switch result {
+            case.success(let followers):
+                if followers.count < 100 {
+                    self?.moreUsersAvailable = false
+                }
+                self?.followers.append(contentsOf: followers)
+                DispatchQueue.main.async {
+                    self?.updateData()
+                   // self.userNotFoundView.isHidden = followers.isEmpty
+                }
+            case .failure(let error):
+                print("Error: \(error)")
             }
         }
     }

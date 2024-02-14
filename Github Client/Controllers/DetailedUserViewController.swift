@@ -57,37 +57,25 @@ class DetailedUserViewController: UIViewController {
     }
     
     func getInfo(username: String) {
-        NetworkManager.shared.getUser(username: username) { [weak self] user, error in
-            guard let self = self else { return }
-
-                 if let error = error {
-                     print("Error fetching followers: \(error)")
-                     return
-                 }
-            
-                if let user = user {
-                    self.user = user
-                  DispatchQueue.main.async {
-                      self.updateUserInformation()
-               }
-                } else {
-                    print("Error: Users array is nil!")
+        NetworkManager.shared.getUser(username: username) { [weak self] result in
+            switch result {
+            case .success(_):
+                DispatchQueue.main.async {
+                    self?.updateUserInformation()
                 }
-             }
+            case .failure(let error):
+                print("Error: \(error)")
+            }
+        }
     }
     
     func getRepo(username: String) {
-        NetworkManager.shared.getRepos(username: username) { [weak self] repos, error in
-            guard let self = self else { return }
-               if let error = error {
-                    print("Error fetching followers: \(error)")
-                    return
-            }
-            
-            if let repo = repos {
-                self.updateData(with: repo)
-            } else {
-                print("Error: Repos array is nil")
+        NetworkManager.shared.getRepos(username: username) { [weak self] result in
+            switch result {
+            case .success(let repo):
+                self?.updateData(with: repo)
+            case .failure(let error):
+                print("Error: \(error)")
             }
         }
     }
