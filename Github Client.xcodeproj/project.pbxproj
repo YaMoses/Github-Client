@@ -26,6 +26,7 @@
 		823A25E22B77FCA700E45914 /* UserRepositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823A25E12B77FCA700E45914 /* UserRepositoryView.swift */; };
 		823A25E42B78B9DC00E45914 /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823A25E32B78B9DC00E45914 /* RepoTableViewCell.swift */; };
 		823A25E62B78BA3F00E45914 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823A25E52B78BA3F00E45914 /* WebViewController.swift */; };
+		82E4A7402B7D11E000844FB2 /* UserNotFoundOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E4A73F2B7D11E000844FB2 /* UserNotFoundOverlayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		823A25E12B77FCA700E45914 /* UserRepositoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryView.swift; sourceTree = "<group>"; };
 		823A25E32B78B9DC00E45914 /* RepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
 		823A25E52B78BA3F00E45914 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		82E4A73F2B7D11E000844FB2 /* UserNotFoundOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotFoundOverlayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				823A25E12B77FCA700E45914 /* UserRepositoryView.swift */,
+				82E4A73F2B7D11E000844FB2 /* UserNotFoundOverlayView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				823A25E22B77FCA700E45914 /* UserRepositoryView.swift in Sources */,
 				8238D2C52B5EEC9800D1E3F9 /* AppDelegate.swift in Sources */,
 				823A25D82B763E2F00E45914 /* FollowersCollectionViewCell.swift in Sources */,
+				82E4A7402B7D11E000844FB2 /* UserNotFoundOverlayView.swift in Sources */,
 				823A25D22B7629E700E45914 /* FollowersViewController.swift in Sources */,
 				823A25D42B7638E100E45914 /* Follower.swift in Sources */,
 				8238D2F52B5EED5C00D1E3F9 /* SearchViewController.swift in Sources */,
