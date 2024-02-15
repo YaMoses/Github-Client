@@ -9,8 +9,8 @@ import UIKit
 class FollowersViewController: UIViewController {
     
     enum Section { case main }
-    
-    var username: String! 
+    var userNotFoundView : UserNotFoundOverlayView!
+    var username: String!
     var followers: [Follower] = []
     var currentPage = 1
     var moreUsersAvailable = true
@@ -20,6 +20,9 @@ class FollowersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavigationBar()
+        userNotFoundView = UserNotFoundOverlayView()
+        view.addSubview(userNotFoundView)
+        userNotFoundView.isHidden = true
         configureCollectionView()
         getFollowers(userName: username, page: currentPage)
         configureDataSource()
@@ -54,7 +57,7 @@ class FollowersViewController: UIViewController {
                 self?.followers.append(contentsOf: followers)
                 DispatchQueue.main.async {
                     self?.updateData()
-                   // self.userNotFoundView.isHidden = followers.isEmpty
+                    self?.userNotFoundView.isHidden = followers.isEmpty
                 }
             case .failure(let error):
                 print("Error: \(error)")
