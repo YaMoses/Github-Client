@@ -21,38 +21,6 @@ enum NetworkError: Error {
     case decodingError(Error)
 }
 
-// MARK: - URLSession Extension
-
-extension URLSession: NetworkService {
-    func fetchData<T: Decodable>(from url: URL, expecting type: T.Type, completionHandler: @escaping (Result<T, NetworkError>) -> Void) {
-        dataTask(with: url) { data, response, error in
-            if let error = error {
-                completionHandler(.failure(.requestFailed(error)))
-                return
-            }
-
-            guard let httpResponse = response as? HTTPURLResponse else {
-                completionHandler(.failure(.invalidResponse))
-                return
-            }
-
-            print("Response status code: \(httpResponse.statusCode)")
-
-            guard let data = data else {
-                completionHandler(.failure(.invalidData))
-                return
-            }
-
-            do {
-                let decodedData = try JSONDecoder().decode(T.self, from: data)
-                completionHandler(.success(decodedData))
-            } catch let decodingError {
-                completionHandler(.failure(.decodingError(decodingError)))
-            }
-        }.resume()
-    }
-}
-
 // MARK: - NetworkManager
 
 class NetworkManager {
@@ -110,4 +78,36 @@ class NetworkManager {
         }
     }
 
+}
+
+// MARK: - URLSession Extension
+
+extension URLSession: NetworkService {
+    func fetchData<T: Decodable>(from url: URL, expecting type: T.Type, completionHandler: @escaping (Result<T, NetworkError>) -> Void) {
+        dataTask(with: url) { data, response, error in
+            if let error = error {
+                completionHandler(.failure(.requestFailed(error)))
+                return
+            }
+
+            guard let httpResponse = response as? HTTPURLResponse else {
+                completionHandler(.failure(.invalidResponse))
+                return
+            }
+
+            print("Response status code: \(httpResponse.statusCode)")
+
+            guard let data = data else {
+                completionHandler(.failure(.invalidData))
+                return
+            }
+
+            do {
+                let decodedData = try JSONDecoder().decode(T.self, from: data)
+                completionHandler(.success(decodedData))
+            } catch let decodingError {
+                completionHandler(.failure(.decodingError(decodingError)))
+            }
+        }.resume()
+    }
 }
