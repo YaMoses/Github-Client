@@ -15,8 +15,7 @@
 		8238D2E62B5EEC9C00D1E3F9 /* Github_ClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8238D2E52B5EEC9C00D1E3F9 /* Github_ClientUITests.swift */; };
 		8238D2E82B5EEC9C00D1E3F9 /* Github_ClientUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8238D2E72B5EEC9C00D1E3F9 /* Github_ClientUITestsLaunchTests.swift */; };
 		8238D2F52B5EED5C00D1E3F9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8238D2F42B5EED5C00D1E3F9 /* SearchViewController.swift */; };
-		8238D2F92B5EEE3100D1E3F9 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8238D2F82B5EEE3100D1E3F9 /* Extensions+UIView.swift */; };
-		8238D2FB2B5EEE6500D1E3F9 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8238D2FA2B5EEE6500D1E3F9 /* Helper.swift */; };
+		8238D2F92B5EEE3100D1E3F9 /* Ext+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8238D2F82B5EEE3100D1E3F9 /* Ext+UIView.swift */; };
 		823A25D22B7629E700E45914 /* FollowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823A25D12B7629E700E45914 /* FollowersViewController.swift */; };
 		823A25D42B7638E100E45914 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823A25D32B7638E100E45914 /* Follower.swift */; };
 		823A25D62B7638F000E45914 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823A25D52B7638F000E45914 /* User.swift */; };
@@ -27,6 +26,10 @@
 		823A25E42B78B9DC00E45914 /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823A25E32B78B9DC00E45914 /* RepoTableViewCell.swift */; };
 		823A25E62B78BA3F00E45914 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823A25E52B78BA3F00E45914 /* WebViewController.swift */; };
 		82D25D492B85510B00046EE7 /* Ext+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D25D482B85510B00046EE7 /* Ext+UIViewController.swift */; };
+		82D25D4B2B855BC500046EE7 /* Ext+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D25D4A2B855BC500046EE7 /* Ext+UIImageView.swift */; };
+		82D25D4D2B855BF000046EE7 /* Ext+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D25D4C2B855BF000046EE7 /* Ext+TextField.swift */; };
+		82D25D4F2B855C5500046EE7 /* Ext+Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D25D4E2B855C5500046EE7 /* Ext+Label.swift */; };
+		82D25D512B855C6300046EE7 /* Ext+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D25D502B855C6300046EE7 /* Ext+Button.swift */; };
 		82E4A7402B7D11E000844FB2 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E4A73F2B7D11E000844FB2 /* EmptyStateView.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,8 +63,7 @@
 		8238D2E52B5EEC9C00D1E3F9 /* Github_ClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github_ClientUITests.swift; sourceTree = "<group>"; };
 		8238D2E72B5EEC9C00D1E3F9 /* Github_ClientUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github_ClientUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8238D2F42B5EED5C00D1E3F9 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		8238D2F82B5EEE3100D1E3F9 /* Extensions+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
-		8238D2FA2B5EEE6500D1E3F9 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		8238D2F82B5EEE3100D1E3F9 /* Ext+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UIView.swift"; sourceTree = "<group>"; };
 		823A25D12B7629E700E45914 /* FollowersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersViewController.swift; sourceTree = "<group>"; };
 		823A25D32B7638E100E45914 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		823A25D52B7638F000E45914 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -72,6 +74,10 @@
 		823A25E32B78B9DC00E45914 /* RepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
 		823A25E52B78BA3F00E45914 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		82D25D482B85510B00046EE7 /* Ext+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UIViewController.swift"; sourceTree = "<group>"; };
+		82D25D4A2B855BC500046EE7 /* Ext+UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UIImageView.swift"; sourceTree = "<group>"; };
+		82D25D4C2B855BF000046EE7 /* Ext+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+TextField.swift"; sourceTree = "<group>"; };
+		82D25D4E2B855C5500046EE7 /* Ext+Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Label.swift"; sourceTree = "<group>"; };
+		82D25D502B855C6300046EE7 /* Ext+Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Button.swift"; sourceTree = "<group>"; };
 		82E4A73F2B7D11E000844FB2 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,9 +175,12 @@
 		8238D2F72B5EEE0F00D1E3F9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				8238D2FA2B5EEE6500D1E3F9 /* Helper.swift */,
-				8238D2F82B5EEE3100D1E3F9 /* Extensions+UIView.swift */,
+				8238D2F82B5EEE3100D1E3F9 /* Ext+UIView.swift */,
 				82D25D482B85510B00046EE7 /* Ext+UIViewController.swift */,
+				82D25D4A2B855BC500046EE7 /* Ext+UIImageView.swift */,
+				82D25D4C2B855BF000046EE7 /* Ext+TextField.swift */,
+				82D25D4E2B855C5500046EE7 /* Ext+Label.swift */,
+				82D25D502B855C6300046EE7 /* Ext+Button.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -342,19 +351,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				823A25DF2B77FC1800E45914 /* DetailedUserViewController.swift in Sources */,
+				82D25D4B2B855BC500046EE7 /* Ext+UIImageView.swift in Sources */,
 				823A25E22B77FCA700E45914 /* UserRepositoryView.swift in Sources */,
 				8238D2C52B5EEC9800D1E3F9 /* AppDelegate.swift in Sources */,
+				82D25D4F2B855C5500046EE7 /* Ext+Label.swift in Sources */,
 				823A25D82B763E2F00E45914 /* FollowersCollectionViewCell.swift in Sources */,
 				82E4A7402B7D11E000844FB2 /* EmptyStateView.swift in Sources */,
 				823A25D22B7629E700E45914 /* FollowersViewController.swift in Sources */,
 				823A25D42B7638E100E45914 /* Follower.swift in Sources */,
 				8238D2F52B5EED5C00D1E3F9 /* SearchViewController.swift in Sources */,
 				823A25D62B7638F000E45914 /* User.swift in Sources */,
+				82D25D512B855C6300046EE7 /* Ext+Button.swift in Sources */,
 				8238D2C72B5EEC9800D1E3F9 /* SceneDelegate.swift in Sources */,
-				8238D2F92B5EEE3100D1E3F9 /* Extensions+UIView.swift in Sources */,
-				8238D2FB2B5EEE6500D1E3F9 /* Helper.swift in Sources */,
+				8238D2F92B5EEE3100D1E3F9 /* Ext+UIView.swift in Sources */,
 				823A25E62B78BA3F00E45914 /* WebViewController.swift in Sources */,
 				823A25E42B78B9DC00E45914 /* RepoTableViewCell.swift in Sources */,
+				82D25D4D2B855BF000046EE7 /* Ext+TextField.swift in Sources */,
 				82D25D492B85510B00046EE7 /* Ext+UIViewController.swift in Sources */,
 				823A25DA2B76445900E45914 /* NetworkManager .swift in Sources */,
 			);
