@@ -31,7 +31,6 @@ class DetailedUserViewController: UIViewController {
         configureDataSource()
         setupUIElements()
         navigationController?.navigationBar.prefersLargeTitles = false
-
     }
 
     func setupUIElements() {
@@ -41,7 +40,6 @@ class DetailedUserViewController: UIViewController {
 
     private func setupUI() {
         view.backgroundColor = .systemBackground
-
         view.addSubview(userRepositoryView)
         
         NSLayoutConstraint.activate([

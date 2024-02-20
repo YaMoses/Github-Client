@@ -20,12 +20,6 @@ class EmptyStateView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-//    init(message: String) {
-//        super.init(frame: .zero)
-//        messageLabel.text = message
-//        setupUI()
-//    }
 
     private func setupUI() {
         addSubview(messageLabel)
@@ -35,11 +29,9 @@ class EmptyStateView: UIView {
         messageLabel.textColor = .secondaryLabel
         messageLabel.textAlignment = .center
         messageLabel.font = .systemFont(ofSize: 28)
-        //messageLabel.text = "This user doesn't have any followers. Go follow them 🙂."
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            
             messageLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -150),
             messageLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 40),
             messageLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -40),
@@ -49,9 +41,8 @@ class EmptyStateView: UIView {
             logoImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 200),
             logoImageView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1.3),
             logoImageView.heightAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1.3),
-            
-            ])
-        }
+        ])
+    }
 
 }
 

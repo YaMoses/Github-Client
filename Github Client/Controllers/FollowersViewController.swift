@@ -9,7 +9,6 @@ import UIKit
 class FollowersViewController: UIViewController {
     
     enum Section { case main }
-    var userNotFoundView : EmptyStateView!
     var username: String!
     var followers: [Follower] = []
     var currentPage = 1
@@ -20,9 +19,6 @@ class FollowersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavigationBar()
-//        userNotFoundView = EmptyStateView()
-//        view.addSubview(userNotFoundView)
-       // userNotFoundView.isHidden = true
         configureCollectionView()
         getFollowers(userName: username, page: currentPage)
         configureDataSource()
@@ -56,7 +52,6 @@ class FollowersViewController: UIViewController {
                 self.followers.append(contentsOf: followers)
                 
                 if self.followers.isEmpty {
-                  //  let message = "This user doesn't have any followers. Go follow them 🙂."
                     DispatchQueue.main.async {
                         self.showEmptyStateView(in: self.view)
                     }
@@ -65,7 +60,6 @@ class FollowersViewController: UIViewController {
                         self.updateData()
                     }
                 }
-               
             case .failure(let error):
                 print("Error: \(error)")
             }
