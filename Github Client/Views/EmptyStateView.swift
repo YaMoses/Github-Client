@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UserNotFoundOverlayView: UIView {
+class EmptyStateView: UIView {
 
         private let imageView: UIImageView = {
             let imageView = UIImageView()
@@ -21,7 +21,7 @@ class UserNotFoundOverlayView: UIView {
             let button = UIButton()
             button.setTitle("OK", for: .normal)
             button.backgroundColor = .systemBlue
-            button.addTarget(UserNotFoundOverlayView.self, action: #selector(okButtonTapped), for: .touchUpInside)
+            button.addTarget(EmptyStateView.self, action: #selector(okButtonTapped), for: .touchUpInside)
             button.translatesAutoresizingMaskIntoConstraints = false
             return button
         }()

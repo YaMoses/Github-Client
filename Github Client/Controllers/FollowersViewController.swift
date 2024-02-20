@@ -9,7 +9,7 @@ import UIKit
 class FollowersViewController: UIViewController {
     
     enum Section { case main }
-    var userNotFoundView : UserNotFoundOverlayView!
+    var userNotFoundView : EmptyStateView!
     var username: String!
     var followers: [Follower] = []
     var currentPage = 1
@@ -20,7 +20,7 @@ class FollowersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavigationBar()
-        userNotFoundView = UserNotFoundOverlayView()
+        userNotFoundView = EmptyStateView()
         view.addSubview(userNotFoundView)
         userNotFoundView.isHidden = true
         configureCollectionView()
