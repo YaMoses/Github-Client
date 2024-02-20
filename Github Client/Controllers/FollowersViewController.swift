@@ -60,7 +60,10 @@ class FollowersViewController: UIViewController {
                     DispatchQueue.main.async {
                         self.showEmptyStateView(in: self.view)
                     }
-                    self.updateData()
+                }else {
+                    DispatchQueue.main.async {
+                        self.updateData()
+                    }
                 }
                
             case .failure(let error):
