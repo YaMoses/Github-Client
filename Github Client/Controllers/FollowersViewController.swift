@@ -20,9 +20,9 @@ class FollowersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavigationBar()
-        userNotFoundView = EmptyStateView()
-        view.addSubview(userNotFoundView)
-        userNotFoundView.isHidden = true
+//        userNotFoundView = EmptyStateView()
+//        view.addSubview(userNotFoundView)
+       // userNotFoundView.isHidden = true
         configureCollectionView()
         getFollowers(userName: username, page: currentPage)
         configureDataSource()
@@ -49,16 +49,20 @@ class FollowersViewController: UIViewController {
     
     func getFollowers(userName: String, page: Int) {
         NetworkManager.shared.getFollowers(username: userName, page: 1) { [weak self] result in
+            guard let self = self else { return }
             switch result {
             case.success(let followers):
-                if followers.count < 100 {
-                    self?.moreUsersAvailable = false
+                if followers.count < 100 { self.moreUsersAvailable = false }
+                self.followers.append(contentsOf: followers)
+                
+                if self.followers.isEmpty {
+                  //  let message = "This user doesn't have any followers. Go follow them 🙂."
+                    DispatchQueue.main.async {
+                        self.showEmptyStateView(in: self.view)
+                    }
+                    self.updateData()
                 }
-                self?.followers.append(contentsOf: followers)
-                DispatchQueue.main.async {
-                    self?.updateData()
-                    self?.userNotFoundView.isHidden = followers.isEmpty
-                }
+               
             case .failure(let error):
                 print("Error: \(error)")
             }

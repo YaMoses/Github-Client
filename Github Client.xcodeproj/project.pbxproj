@@ -26,6 +26,7 @@
 		823A25E22B77FCA700E45914 /* UserRepositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823A25E12B77FCA700E45914 /* UserRepositoryView.swift */; };
 		823A25E42B78B9DC00E45914 /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823A25E32B78B9DC00E45914 /* RepoTableViewCell.swift */; };
 		823A25E62B78BA3F00E45914 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823A25E52B78BA3F00E45914 /* WebViewController.swift */; };
+		82D25D492B85510B00046EE7 /* Ext+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D25D482B85510B00046EE7 /* Ext+UIViewController.swift */; };
 		82E4A7402B7D11E000844FB2 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E4A73F2B7D11E000844FB2 /* EmptyStateView.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		823A25E12B77FCA700E45914 /* UserRepositoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryView.swift; sourceTree = "<group>"; };
 		823A25E32B78B9DC00E45914 /* RepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
 		823A25E52B78BA3F00E45914 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		82D25D482B85510B00046EE7 /* Ext+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UIViewController.swift"; sourceTree = "<group>"; };
 		82E4A73F2B7D11E000844FB2 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,6 +171,7 @@
 			children = (
 				8238D2FA2B5EEE6500D1E3F9 /* Helper.swift */,
 				8238D2F82B5EEE3100D1E3F9 /* Extensions+UIView.swift */,
+				82D25D482B85510B00046EE7 /* Ext+UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				8238D2FB2B5EEE6500D1E3F9 /* Helper.swift in Sources */,
 				823A25E62B78BA3F00E45914 /* WebViewController.swift in Sources */,
 				823A25E42B78B9DC00E45914 /* RepoTableViewCell.swift in Sources */,
+				82D25D492B85510B00046EE7 /* Ext+UIViewController.swift in Sources */,
 				823A25DA2B76445900E45914 /* NetworkManager .swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

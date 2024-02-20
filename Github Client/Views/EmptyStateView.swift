@@ -9,54 +9,50 @@ import UIKit
 
 class EmptyStateView: UIView {
 
-        private let imageView: UIImageView = {
-            let imageView = UIImageView()
-            imageView.image = UIImage(named: "gh-logo")
-            imageView.contentMode = .scaleAspectFit
-            imageView.translatesAutoresizingMaskIntoConstraints = false
-            return imageView
-        }()
+    let messageLabel = UILabel(text: "This user doesn't have any followers. Go follow them 🙂.", font: .systemFont(ofSize: 28))
+    let logoImageView = UIImageView(title: "empty-state-logo")
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupUI()
+    }
 
-        private let okButton: UIButton = {
-            let button = UIButton()
-            button.setTitle("OK", for: .normal)
-            button.backgroundColor = .systemBlue
-            button.addTarget(EmptyStateView.self, action: #selector(okButtonTapped), for: .touchUpInside)
-            button.translatesAutoresizingMaskIntoConstraints = false
-            return button
-        }()
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+//    init(message: String) {
+//        super.init(frame: .zero)
+//        messageLabel.text = message
+//        setupUI()
+//    }
 
-        override init(frame: CGRect) {
-            super.init(frame: frame)
-            setupUI()
-        }
+    private func setupUI() {
+        addSubview(messageLabel)
+        addSubview(logoImageView)
+        
+        messageLabel.numberOfLines = 3
+        messageLabel.textColor = .secondaryLabel
+        messageLabel.textAlignment = .center
+        messageLabel.font = .systemFont(ofSize: 28)
+        //messageLabel.text = "This user doesn't have any followers. Go follow them 🙂."
+        logoImageView.translatesAutoresizingMaskIntoConstraints = false
 
-        required init?(coder: NSCoder) {
-            fatalError("init(coder:) has not been implemented")
-        }
+        NSLayoutConstraint.activate([
+            
+            messageLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -150),
+            messageLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 40),
+            messageLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -40),
+            messageLabel.heightAnchor.constraint(equalToConstant: 200),
 
-        private func setupUI() {
-            backgroundColor = .white
-
-            addSubview(imageView)
-            addSubview(okButton)
-
-            NSLayoutConstraint.activate([
-                imageView.topAnchor.constraint(equalTo: topAnchor, constant: 20),
-                imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-                imageView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.8),
-                imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor),
-
-                okButton.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20),
-                okButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-                okButton.widthAnchor.constraint(equalToConstant: 100),
-                okButton.heightAnchor.constraint(equalToConstant: 40),
+            logoImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 140),
+            logoImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 200),
+            logoImageView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1.3),
+            logoImageView.heightAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1.3),
+            
             ])
         }
 
-        @objc private func okButtonTapped() {
-            removeFromSuperview()
-        }
 }
 
 
